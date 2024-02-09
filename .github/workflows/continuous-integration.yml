@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Application JAR
         working-directory: ./code-challenge-swat
-        run: mvn clean package -DskipTests
+        run: mvn clean package
 
       - name: Docker Compose Build
         working-directory: ./SwatBank

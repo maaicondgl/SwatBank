@@ -27,7 +27,7 @@ jobs:
           cache: maven
 
       - name: Build Application JAR
-        working-directory: ./SwatBank/code-challenge-swatt
+        working-directory: ./SwatBank/code-challenge-swat
         run: mvn clean package
 
       - name: Docker Compose Build

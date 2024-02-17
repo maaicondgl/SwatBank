@@ -16,7 +16,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "clientes")
-@JsonPropertyOrder({"id","Name", "phoneNumber", "address"})
 public class ClienteEntity implements Serializable {
     @Column(unique=true)
     @Id
@@ -24,7 +23,7 @@ public class ClienteEntity implements Serializable {
     @Column(unique=true)
     private String rg;
     private String nome;
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL)
     private ContaBancariaEntity contaBancaria;
 
     @Override

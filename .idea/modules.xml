@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SwatBank.iml" filepath="$PROJECT_DIR$/.idea/SwatBank.iml" />
-      <module fileurl="file://$PROJECT_DIR$/code-challenge-swat/apirestfull.iml" filepath="$PROJECT_DIR$/code-challenge-swat/apirestfull.iml" />
     </modules>
   </component>
 </project>

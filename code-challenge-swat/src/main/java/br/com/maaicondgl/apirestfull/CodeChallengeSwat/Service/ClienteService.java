@@ -30,11 +30,23 @@ public class ClienteService {
     }
 
     public ClienteEntity createCustomer(ClienteEntity cliente) {
-        ContaBancariaEntity conta = contaBancariaService.registerAccount(cliente.getContaBancaria());
+        // Obtém a conta bancária associada ao cliente
+        ContaBancariaEntity contaBancaria = cliente.getContaBancaria();
 
-        cliente.setContaBancaria(conta);
-        cliente = clienteRepository.save(cliente);
-        return cliente;
+        // Verifica se a conta bancária está associada ao cliente
+        if (contaBancaria != null && contaBancaria.getIdConta() != null) {
+            // Obtém a conta bancária do banco de dados usando o ID fornecido
+            Optional<ContaBancariaEntity> contaBancariaOptional = contaBancariaRepository.findById(contaBancaria.getIdConta());
+
+            // Verifica se a conta bancária existe no banco de dados
+            if (contaBancariaOptional.isPresent()) {
+                // Se a conta bancária existir, associe-a ao cliente
+                cliente.setContaBancaria(contaBancariaOptional.get());
+            }
+        }
+
+        // Salva o cliente no banco de dados
+        return clienteRepository.save(cliente);
     }
 
     public ClienteEntity updateCustomer(ClienteEntity cliente) throws ResourceNotFoundException {

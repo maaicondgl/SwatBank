@@ -6,13 +6,13 @@ import java.util.Map;
 import java.util.Optional;
 
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Exceptions.ResourceNotFoundException;
+import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Facade.ClienteFacade;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Model.ClienteEntity;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Model.ContaBancariaEntity;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Service.ClienteService;
-import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Service.ContaBancariaService;
+import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Service.ClienteServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -28,22 +28,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/cliente")
 public class ClienteController {
-
     @Autowired
-    private ClienteService clienteService;
+    ClienteFacade clienteFacade;
 
     ContaBancariaEntity contaBancaria;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<ClienteEntity> findAll() {
-        return clienteService.customerList();
+        return clienteFacade.customerList();
     }
 
     @GetMapping(value = "/consultacpf/{cpf}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> searchCustomer(@PathVariable String cpf) {
         try {
             // CPF do cliente é usado como ID
-            Optional<ClienteEntity> opcaoCpf = clienteService.searchCustomer(cpf);
+            Optional<ClienteEntity> opcaoCpf = clienteFacade.searchCustomer(cpf);
 
             if (opcaoCpf.isPresent()) {
                 // Obtém a conta bancária do cliente
@@ -86,13 +85,13 @@ public class ClienteController {
     @PostMapping
     public ResponseEntity<ClienteEntity> createCustomer(@RequestBody ClienteEntity cliente){
 
-        return ResponseEntity.ok(clienteService.createCustomer(cliente));
+        return ResponseEntity.ok(clienteFacade.createCustomer(cliente));
     }
-    @PutMapping
+    @PutMapping("/update/{cpf}")
     public ResponseEntity updateCustomer(@RequestBody ClienteEntity cliente){
 
         try{
-            return ResponseEntity.ok(clienteService.updateCustomer(cliente));
+            return ResponseEntity.ok(clienteFacade.updateCustomer(cliente));
         } catch(ResourceNotFoundException e){
             return ResponseEntity
                     .status(HttpStatus.NOT_FOUND)
@@ -102,7 +101,7 @@ public class ClienteController {
 
     @DeleteMapping("/excluir/{cpf}")
     public ResponseEntity<?> excluirClientePorCpf(@PathVariable String cpf) {
-        clienteService.deletarClientePorCpf(cpf);
+        clienteFacade.deletarClientePorCpf(cpf);
         return ResponseEntity.ok("Cliente excluído com sucesso.");
     }
 }

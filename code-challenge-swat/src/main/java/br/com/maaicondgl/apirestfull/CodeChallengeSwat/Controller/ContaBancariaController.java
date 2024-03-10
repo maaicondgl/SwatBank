@@ -1,8 +1,10 @@
 package br.com.maaicondgl.apirestfull.CodeChallengeSwat.Controller;
 
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Exceptions.ResourceNotFoundException;
+import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Facade.ContaBancariaFacade;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Model.ContaBancariaEntity;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Service.ContaBancariaService;
+import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Service.ContaBancariaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -24,23 +26,23 @@ import java.util.Map;
 @RequestMapping("/contaBancaria")
 public class ContaBancariaController {
     @Autowired
-    private ContaBancariaService contaBancariaService;
+    private ContaBancariaFacade contaBancariaFacade;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<ContaBancariaEntity> findAll() {
-        return contaBancariaService.listAccount();
+        return contaBancariaFacade.listAccount();
     }
 
     @PostMapping
     public ResponseEntity<ContaBancariaEntity> registerAccount(@RequestBody ContaBancariaEntity contaBancaria){
-        return ResponseEntity.ok(contaBancariaService.registerAccount(contaBancaria));
+        return ResponseEntity.ok(contaBancariaFacade.registerAccount(contaBancaria));
     }
 
     //pesquisar por conta e agencia
     @GetMapping("/search/{conta}/{agencia}")
     public ResponseEntity<?> ConsultationAccount(@PathVariable String conta, @PathVariable String agencia){
 
-        ContaBancariaEntity contaBancaria = contaBancariaService.ConsultationAccount(conta, agencia);
+        ContaBancariaEntity contaBancaria = contaBancariaFacade.ConsultationAccount(conta, agencia);
 
         if(contaBancaria != null){
             return ResponseEntity.ok(contaBancaria);
@@ -50,17 +52,18 @@ public class ContaBancariaController {
 
     @PutMapping
     public ResponseEntity<ContaBancariaEntity> accountChange(@RequestBody ContaBancariaEntity contaBancaria){
-        return ResponseEntity.ok(contaBancariaService.accountChange(contaBancaria));
+        return ResponseEntity.ok(contaBancariaFacade.accountChange(contaBancaria));
     }
 
     @DeleteMapping(value = "/excluir/{idConta}")
     public ResponseEntity<?> delete(@PathVariable Long idConta) {
-        contaBancariaService.deleteContaById(idConta);
+        contaBancariaFacade.deleteContaById(idConta);
         return  ResponseEntity.noContent().build();
     }
+
     @PostMapping("/{conta}/saque/{valor}")
     public ResponseEntity<Map<String, Object>> sacarComJuros(@PathVariable String conta, @PathVariable double valor) throws ResourceNotFoundException {
-        ContaBancariaEntity contaBancaria = contaBancariaService.sacarChequeEspecial(conta, valor);
+        ContaBancariaEntity contaBancaria = contaBancariaFacade.sacarChequeEspecial(conta, valor);
         double limiteAtual = contaBancaria.getLimite();
         try {
             Map<String, Object> response = new HashMap<>();

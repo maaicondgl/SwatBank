@@ -3,8 +3,6 @@ package br.com.maaicondgl.apirestfull.CodeChallengeSwat.Controller;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Exceptions.ResourceNotFoundException;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Facade.ContaBancariaFacade;
 import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Model.ContaBancariaEntity;
-import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Service.ContaBancariaService;
-import br.com.maaicondgl.apirestfull.CodeChallengeSwat.Service.ContaBancariaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

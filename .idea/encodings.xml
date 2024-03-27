@@ -3,5 +3,46 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/code-challenge-swat/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/code-challenge-swat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/front-end/cliente/node_modules/@bcoe/v8-coverage/.gitattributes" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/front-end/cliente/node_modules/@bcoe/v8-coverage/tsconfig.json" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/@bcoe/v8-coverage/.gitattributes" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/@bcoe/v8-coverage/tsconfig.json" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/array.prototype.flat/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/array.prototype.flatmap/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/array.prototype.reduce/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/deep-equal/readme.markdown" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/eslint-plugin-react/node_modules/resolve/readme.markdown" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/function.prototype.name/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-arguments/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-arrayish/.istanbul.yml" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-boolean-object/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-date-object/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-map/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-map/.gitattributes" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-negative-zero/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-regex/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-set/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-set/.gitattributes" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-weakset/.eslintignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/is-weakset/.gitattributes" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/object.assign/hasSymbols.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/object.assign/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/object.entries/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/object.fromentries/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/object.values/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/postcss-color-hex-alpha/.gitattributes" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/postcss-color-hex-alpha/CONTRIBUTING.md" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/postcss-double-position-gradients/.gitattributes" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/postcss-double-position-gradients/CONTRIBUTING.md" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/postcss-gap-properties/CONTRIBUTING.md" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/postcss-pseudo-class-any-link/CONTRIBUTING.md" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/resolve/readme.markdown" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/string.prototype.matchall/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/string.prototype.matchall/polyfill-regexp-matchall.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/string.prototype.matchall/regexp-matchall.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/string.prototype.trim/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/string.prototype.trimend/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/string.prototype.trimstart/implementation.js" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/swat-front/front-end/cliente/node_modules/which-boxed-primitive/.eslintignore" charset="ISO-8859-1" />
   </component>
 </project>
